@@ -15,3 +15,8 @@ test('undefined category returns every product', () => {
   const result = filterByCategory(products, undefined);
   expect(result.map(({ id }) => id)).toEqual([1, 2, 3, 4, 5, 6]);
 });
+
+test('empty category returns every product', () => {
+  const result = filterByCategory(products, '');
+  expect(result.map(({ id }) => id)).toEqual([1, 2, 3, 4, 5, 6]);
+});
