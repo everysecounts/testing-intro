@@ -5,3 +5,8 @@ test('category all returns every product', () => {
   const result = filterByCategory(products, 'all');
   expect(result.map(({ id }) => id)).toEqual([1, 2, 3, 4, 5, 6]);
 });
+
+test('filters products by category', () => {
+  const result = filterByCategory(products, 'electronics');
+  expect(result.map(({ id }) => id)).toEqual([1, 2]);
+});
