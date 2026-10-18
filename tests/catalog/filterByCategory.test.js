@@ -35,3 +35,8 @@ test('filters products by clothes category', () => {
   const result = filterByCategory(products, 'clothes');
   expect(result).toEqual([]);
 });
+
+test('filters products by toys category', () => {
+  const result = filterByCategory(products, 'toys');
+  expect(result).toEqual([]);
+});
