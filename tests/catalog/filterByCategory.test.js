@@ -21,7 +21,6 @@ test('empty category returns every product', () => {
   expect(result.map(({ id }) => id)).toEqual([1, 2, 3, 4, 5, 6]);
 });
 
-
 test('filters products by books category', () => {
   const result = filterByCategory(products, 'books');
   expect(result.map(({ id }) => id)).toEqual([3, 6]);
@@ -30,4 +29,9 @@ test('filters products by books category', () => {
 test('filters products by home category', () => {
   const result = filterByCategory(products, 'home');
   expect(result.map(({ id }) => id)).toEqual([4, 5]);
+});
+
+test('filters products by clothes category', () => {
+  const result = filterByCategory(products, 'clothes');
+  expect(result).toEqual([]);
 });
